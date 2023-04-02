@@ -14,6 +14,6 @@ class NflGameRepository(SqliteRepository):
 
     def find(self, *args) -> pd.DataFrame:
         fetched_records = super().find(*args)
-        self._modiify_dataframe(fetched_records)
+        self._modify_dataframe(fetched_records)
         return fetched_records
 

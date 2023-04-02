@@ -26,8 +26,8 @@ class FindQuery:
                 
         def _build_querystring(self, *entity_fields: list[str] | str) -> str:
             query_order = Order.asc if self.use_ascending_order else Order.desc
-            query_uses_where_expression = self.where_expression
-            if query_uses_where_expression:
+            query_uses_where_expressions = self.where_expression
+            if query_uses_where_expressions:
                 return PypikaQuery.from_(self.db_table).orderby('rowid', order=query_order).select(*entity_fields) \
                     .where(self.where_expression) \
                     .limit(self.limit).get_sql().strip()

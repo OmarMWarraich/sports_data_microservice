@@ -16,7 +16,7 @@ class BettingService:
 
     def __init__(self, nfl_game_service: NflGameService):
         self.nfl_game_service = nfl_game_service
-
+    # We're mocking a weather service here
     def get_expected_weather(self, on_date: date) -> Weather:
         return 'cold'
     

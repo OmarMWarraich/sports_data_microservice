@@ -31,7 +31,7 @@ def feed_query(controller_fn):
     return verify_query
 
 
-class NflGameGraphqlRouter:
+class NflGameGraphQLRouter:
 
     @games_module.route('/graphql', methods=['POST'])
     @staticmethod

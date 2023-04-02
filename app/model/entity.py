@@ -16,5 +16,5 @@ class Entity(ABC):
 
     @classmethod
     def table(cls) -> Table:
-        return Table(cls.table_name)
+        return Table(cls.table_name())
     
